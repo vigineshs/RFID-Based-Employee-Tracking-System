@@ -1,0 +1,38 @@
+RFID Based employee attendance tracking system
+XenTech
+
+
+= Contents =
+
+  System requirements
+  Overview
+  Registration
+  Contact information
+
+
+= System requirements =
+
+- Windows xp, Windows 7 operating system
+- about 5 gigabytes of free space on hard disk
+
+
+= Overview =
+
+The purpose of the “RFID based employee tracking system” project is to detect which employee is entering and leaving the office. At the end of the month based on the attendance employee’s salary will be calculated. Apart from this, the administrator will also be able to track their employees in the campus with the help of the RFID tags the employees possess 
+
+
+=Installation=
+
+Run the executable and follow the instruction:
+
+1. Load the database file into DB2
+2. RUN the index.jsp file
+3. Register with a valid employeeID and use the system
+4. To set tag to an employee, open the Rifidi -->rfid.rfts file. then add tags. 
+5. Start the reader.
+6. Open the workspace in eclipse. run RfidSimulation.java file to insert the tags into the database
+
+
+= Contact information =
+
+Please send your suggestions and bug reports to vigineshsankararaman@gmail.com

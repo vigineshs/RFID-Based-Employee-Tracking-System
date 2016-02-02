@@ -1,0 +1,216 @@
+/*
+ *  AlienExampleClient.java
+ *
+ *  Created:	Apirl 30, 2012
+ *  Project:	RiFidi Emulator - A Software Simulation Tool for RFID Devices
+ *  				http://www.rifidi.org
+ *  				http://rifidi.sourceforge.net
+ *  Copyright:	Pramari LLC and the Rifidi Project
+ *  License:	Lesser GNU Public License (LGPL)
+ *  				http://www.opensource.org/licenses/lgpl-license.html
+ *  Author:    Kyle Neumeier - kyle@pramari.com
+    set path=%path%;C:\Program Files\Java\jdk1.5.0_09\bin
+ */
+//package sandbox;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.io.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.lang.String;
+import javax.servlet.*;
+import javax.servlet.http.HttpSession;
+
+/**
+ * This class shows how to create a program to talk to the alien reader.
+ * 
+ * @author Kyle Neumeier - kyle@pramari.com
+ *
+ */
+public class AlienExampleClient1 
+{
+
+	public static final String IP_ADDRESS = new String("127.0.0.1");
+	public static final int READER_PORT = 20000;
+	private static Socket connection = null;
+
+	private static PrintWriter out = null;
+	private static BufferedReader in = null;
+	private static ServletRequest req;
+	private static ServletResponse res;
+	private static HttpSession session; 
+	
+	/**
+	 * Initialize the connection and send username/password
+	 * @throws IOException
+	 * @throws InterruptedException
+	 */
+	public void  init() throws ServletException, IOException, InterruptedException {
+		connection = new Socket("127.0.0.1", READER_PORT);
+
+		in = new BufferedReader(new InputStreamReader(connection
+				.getInputStream()));
+		out = new PrintWriter(connection.getOutputStream());
+
+		Thread.sleep(500);
+		System.out.println(readFromReader(in));
+		out.write("alien\n");
+		out.flush();
+		System.out.println(readFromReader(in));
+		Thread.sleep(500);
+		out.write("password\n");
+		out.flush();
+		System.out.println(readFromReader(in));
+	}
+	
+	/**
+	 * Tear down the connection
+	 * @throws IOException
+	 */
+	private void tearDown() throws IOException{
+		out.write("q");
+		out.flush();
+		connection.close();
+	}
+	
+	/**
+	 * Get tags back from the alien reader
+	 * @return
+	 * @throws IOException
+	 */
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException{
+		String command = "t";
+		out.write(command + "\n");
+		out.flush();
+		Dbconn dbc = Dbconn.getConnection();
+	  	Connection con=dbc.getDbconnection();
+	  	int i;
+		
+		
+		
+		
+		String returnVal = readFromReader(in);
+		
+		String username=(String)session.getAttribute("uname");
+		FileWriter fstream = new FileWriter("out.txt");
+        BufferedWriter out = new BufferedWriter(fstream);
+        out.write(returnVal);
+        
+        String tag,discdate,disctime,lastdate,lasttime,counte,ant,proto;
+		String temp;
+		
+		while(returnVal=="")
+		{
+		temp= returnVal;
+		
+		  tag = temp.substring(7, 36);
+		  discdate=temp.substring(43,53);
+		 
+		  discdate=discdate.replace("/","-");
+		  disctime=temp.substring(54,62);
+		  lastdate=temp.substring(69,79);
+		  lastdate=lastdate.replace("/","-");
+		  lasttime=temp.substring(80,88);
+		  
+		
+		  if(temp.charAt(97)==(','))
+		 {
+			  counte=temp.substring(96,97);
+		 }
+		  else
+			  counte=temp.substring(96,98);
+		 
+			  
+		  
+		  proto=temp.substring(113,115);
+		  System.out.println(tag); 
+		  System.out.println(discdate); 
+		  System.out.println(disctime); 
+		  System.out.println(lastdate);
+		  System.out.println(lasttime);
+		  System.out.println(counte);
+		  System.out.println(proto);
+		  
+		  PreparedStatement pstmt = null;
+			ResultSet rset=null;
+			boolean found=false;
+		out.close();
+		try {
+			
+					   
+			pstmt=con.prepareStatement("UPDATE Tag SET (lastdate,lasttime,counte) =('"+lastdate+"','"+lasttime+"','"+counte+"')where username='"+ username+"'");
+			pstmt.executeUpdate();
+			pstmt=con.prepareStatement("select * from Details where username='"+ username +"'");
+			pstmt.executeQuery();
+			while(rset.next())
+			{
+				int i= Integer.parseInt(counte);
+				if( % 2 == '1')
+				{
+			RequestDispatcher rd = req.getRequestDispatcher("/home_emp_in.jsp");
+			 rd.forward(req,res);
+				}
+				else
+				{
+					RequestDispatcher rd = req.getRequestDispatcher("/home_emp_out.jsp");
+					 rd.forward(req,res);
+						}
+			} 
+		}
+		catch (Exception e) {
+			System.out.println("DB2 Database connection Failed");
+			e.printStackTrace();
+			//return;
+			}
+		}
+		
+		
+	
+	}
+	
+	/**
+	 * @param args
+
+
+
+	 * @throws InterruptedException 
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException, InterruptedException, ServletException {
+		AlienExampleClient1 client = new AlienExampleClient1();
+		client.init();
+		Thread.sleep(500);
+		
+		client.service(req, res);
+		Thread.sleep(500);
+		client.tearDown();
+
+	}
+	
+	/**
+	 * Read responses from the socket
+	 * @param inBuf
+	 * @return
+	 * @throws IOException
+	 */
+	public static String readFromReader(BufferedReader inBuf) throws IOException{
+		StringBuffer buf=new StringBuffer();
+		int ch=inBuf.read();
+		while((char)ch!='\0'){
+			buf.append((char)ch);
+			ch=inBuf.read();
+				FileWriter fstream = new FileWriter("out.txt");
+                BufferedWriter out = new BufferedWriter(fstream);
+                out.write(ch);
+		}
+		return buf.toString();
+	}
+
+}

@@ -1,0 +1,77 @@
+function name1()
+{
+ var d=document.f1.t1.value;
+if(d=="")
+alert("Enter the name");
+  var i;
+for(i=0;i<d.length;i++)
+  {  
+var temp=d.charAt(i);
+var tt=new RegExp("^\\d\$") ;
+if(tt.test(temp))
+{
+alert("Enter only character");
+break;
+}}}
+function age()
+{
+   if(document.f1.age.value=="")
+     alert("Enter age");
+   else
+    if(document.f1.age.value<25) 
+     alert("Enter age above 18 years");
+   var a=document.f1.age.value;
+    var b=new RegExp("^\\d\\d\$") ;
+  if(!b.test(a))
+     alert("enter number");
+}
+function email()
+{
+	
+var x=document.f1.mail.value;
+atpos=x.indexOf("@");
+dotpos=x.lastIndexOf(".");
+if(atpos<1 || dotpos<atpos+2 || dotpos+3>=x.length)
+alert("Enter valid ID");
+}
+function username()
+{
+var u=document.f1.t7.value;
+if(u.length==0)
+alert("enter username");
+
+}
+function password()
+{
+var l=document.f1.t5.value;
+if(l.length==0)
+alert("Enter password");
+else if(l.length<6)
+alert("password should be minimum 6 characters");
+}
+function confirm()
+{
+var c=document.f1.t6.value;
+var l=document.f1.t5.value;
+if(l!=c)
+alert("passwords don't match!!");
+}
+
+function gender()
+{
+if((!document.f1.gender[0].checked)&&(!document.f1.gender[1].checked))
+alert("Choose any one gender");
+}
+
+function validate()
+{
+if(document.f1.t4.value=="")
+alert("Enter the address");
+name1();
+age();
+email();
+password();
+confirm();
+gender();
+
+}

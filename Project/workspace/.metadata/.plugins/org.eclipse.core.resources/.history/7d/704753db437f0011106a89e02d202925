@@ -1,0 +1,106 @@
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import javax.servlet.http.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpSession;
+
+
+/**
+ * Servlet implementation class for Servlet: Login
+ *
+ */
+ public class Login extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+   static final long serialVersionUID = 1L;
+   
+    /* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public Login() {
+		super();
+	}   	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}  	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		Dbconn dbc = Dbconn.getConnection();
+	  	Connection con=dbc.getDbconnection();
+	  	Statement st;
+	  	
+	   	String username=request.getParameter("uname");
+	  	System.out.println("username:"+username);
+	  	String password=request.getParameter("password");
+	  	System.out.println("password:"+password);
+	  	
+		HttpSession session=request.getSession(true);
+	  	session.setAttribute("uname",username);
+	  	  					  	      
+
+	  	try
+		{ System.out.println("inside try");
+	  	  //st=con.createStatement();
+	  	  st=con.createStatement();
+	  	
+	  	  System.out.println("select * from Register where username='"+username+"' and password='"+password+"'");
+	  	  ResultSet rs=st.executeQuery("select * from Register where username='"+username+"' and password='"+password+"'");
+	   
+	  	  if(rs.next())
+	      {
+	    	 
+	    	  System.out.println("Login success"); 
+	  
+	    	  username = rs.getString("username");
+	    	  String empid = rs.getString(6);
+	    	  System.out.println(empid);
+	          request.setAttribute("username", username); 	
+	          
+	       	
+	  	   if(empid.equals("@74925#"))
+	         {
+				
+	  	  	 System.out.println("welcum");
+	         RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/home_op.jsp");
+	    	 rd.forward(request,response);
+	         }
+			else 
+			{
+				 
+				 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/home_emp_in.jsp");
+		    	 rd.forward(request,response);
+			}
+	      }
+	      else
+	      {
+	    		  System.out.println("login failed");
+	    		  String mess="<font color='red'>Incorrect username/password. Login Failed</font>";
+	    		   String link="http://localhost:8080/TGMC/login.jsp";
+	               request.setAttribute("link", link);     
+	               request.setAttribute("mess", mess);     
+	               
+	         		    RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/message.jsp");
+			  	rd.forward(request, response);
+			  	
+	      
+	      }
+	      
+		}
+	  	
+	  	catch(Exception e)
+	  	{
+	  		e.printStackTrace();
+	  	}
+	}   	  	    
+}

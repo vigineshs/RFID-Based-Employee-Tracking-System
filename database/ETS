@@ -1,0 +1,830 @@
+-- This CLP file was created using DB2LOOK Version "9.7" 
+-- Timestamp: 4/6/2012 8:32:43 AM
+-- Database Name: ETS            
+-- Database Manager Version: DB2/NT Version 9.7.2          
+-- Database Codepage: 1208
+-- Database Collating Sequence is: IDENTITY
+
+
+CONNECT TO ETS;
+
+
+
+-- Mimic tablespace
+
+ALTER TABLESPACE SYSCATSPACE
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE TEMPSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      FILE SYSTEM CACHING 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE USERSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120320_065130"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120320_065130"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."SECID"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."SECID"  (
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "FNAME" VARCHAR(25) NOT NULL , 
+		  "DEPARTMENT" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_214200"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_214200"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120320_065130_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120320_065130_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_212752"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_212752"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(10) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."ORGDETAILS"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."ORGDETAILS"  (
+		  "ORGDET" VARCHAR(1024) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_214133"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_214133"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_212752_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_212752_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" INTEGER NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_220126"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_220126"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_214133_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_214133_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_220145"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_220145"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_214200_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_214200_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "REPASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."DETAILS"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."DETAILS"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL , 
+		  "DEPARTMENT" VARCHAR(30) , 
+		  "GRADE" VARCHAR(30) , 
+		  "TEAM" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_220126_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_220126_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "RESADDR" VARCHAR(70) NOT NULL , 
+		  "RESNO" VARCHAR(12) NOT NULL , 
+		  "MOBNO" VARCHAR(12) NOT NULL , 
+		  "BANKNAME" VARCHAR(25) NOT NULL , 
+		  "BRANCHNAME" VARCHAR(25) NOT NULL , 
+		  "ACCNO" VARCHAR(16) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(25) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."REGISTER"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."REGISTER"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120322_220145_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120322_220145_EXCEPTION"  (
+		  "FIRSTNAME" VARCHAR(25) NOT NULL , 
+		  "LASTNAME" VARCHAR(25) NOT NULL , 
+		  "AGE" INTEGER NOT NULL , 
+		  "GENDER" VARCHAR(6) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "PASSWORD" VARCHAR(30) NOT NULL , 
+		  "SQ" INTEGER NOT NULL , 
+		  "SQANS" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120323_072117"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120323_072117"  (
+		  "LEVEL1" VARCHAR(20) NOT NULL , 
+		  "LEVEL2.1" VARCHAR(20) NOT NULL , 
+		  "LEVEL2.2" VARCHAR(20) NOT NULL , 
+		  "LEVEL3" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.1" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.2" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.3" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.4" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.5" VARCHAR(20) NOT NULL , 
+		  "LEVEL4.6" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."HIERARCHY"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."HIERARCHY"  (
+		  "POST1" VARCHAR(20) NOT NULL , 
+		  "POST2" VARCHAR(20) NOT NULL , 
+		  "POST3" VARCHAR(20) NOT NULL , 
+		  "POST4" VARCHAR(20) NOT NULL , 
+		  "POST5" VARCHAR(20) NOT NULL , 
+		  "POST6" VARCHAR(20) NOT NULL , 
+		  "POST7" VARCHAR(20) NOT NULL , 
+		  "POST8" VARCHAR(20) NOT NULL , 
+		  "POST9" VARCHAR(20) NOT NULL , 
+		  "POST10" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120323_072117_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120323_072117_EXCEPTION"  (
+		  "POST1" VARCHAR(20) NOT NULL , 
+		  "POST2" VARCHAR(20) NOT NULL , 
+		  "POST3" VARCHAR(20) NOT NULL , 
+		  "POST4" VARCHAR(20) NOT NULL , 
+		  "POST5" VARCHAR(20) NOT NULL , 
+		  "POST6" VARCHAR(20) NOT NULL , 
+		  "POST7" VARCHAR(20) NOT NULL , 
+		  "POST8" VARCHAR(20) NOT NULL , 
+		  "POST9" VARCHAR(20) NOT NULL , 
+		  "POST10" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120404_220522"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120404_220522"  (
+		  "NAME" VARCHAR(40) NOT NULL , 
+		  "DISC" TIME NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120404_220915"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120404_220915"  (
+		  "NAME" VARCHAR(40) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120404_220522_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120404_220522_EXCEPTION"  (
+		  "NAME" VARCHAR(40) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_084249"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_084249"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "DISCTIME" TIME NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNT" INTEGER NOT NULL , 
+		  "PROTO" INTEGER NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120404_220915_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120404_220915_EXCEPTION"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "DISCTIME" TIME NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNT" INTEGER NOT NULL , 
+		  "PROTO" INTEGER NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_084249_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_084249_EXCEPTION"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "DISCTIME" TIME NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNTE" VARCHAR(5) NOT NULL , 
+		  "PROTO" VARCHAR(5) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_135702"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_135702"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "DISCTIME" TIME NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "PROTO" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "FIRSTNAME" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_135702_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_135702_EXCEPTION"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "PROTO" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "EMPID" VARCHAR(7) NOT NULL , 
+		  "FIRSTNAME" VARCHAR(30) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_184245"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_184245"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" DATE NOT NULL , 
+		  "DISCTIME" TIME NOT NULL , 
+		  "LASTDATE" DATE NOT NULL , 
+		  "LASTTIME" TIME NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "PROTO" VARCHAR(10) NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "LASTDATE1" DATE , 
+		  "LASTTIME1" TIME , 
+		  "NOHR" VARCHAR(10) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_224751"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_224751"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" VARCHAR(12) NOT NULL , 
+		  "DISCTIME" VARCHAR(12) NOT NULL , 
+		  "LASTDATE" VARCHAR(12) NOT NULL , 
+		  "LASTTIME" VARCHAR(12) NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "PROTO" VARCHAR(10) NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "LASTDATE1" VARCHAR(12) , 
+		  "LASTTIME1" VARCHAR(12) , 
+		  "NOHR" VARCHAR(10) , 
+		  "NOMIN" VARCHAR(2) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_184245_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_184245_EXCEPTION"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" VARCHAR(8) NOT NULL , 
+		  "DISCTIME" VARCHAR(8) NOT NULL , 
+		  "LASTDATE" VARCHAR(8) NOT NULL , 
+		  "LASTTIME" VARCHAR(8) NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "PROTO" VARCHAR(10) NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "LASTDATE1" VARCHAR(8) , 
+		  "LASTTIME1" VARCHAR(8) , 
+		  "NOHR" VARCHAR(10) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."TAG"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."TAG"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" VARCHAR(12) NOT NULL , 
+		  "DISCTIME" VARCHAR(12) NOT NULL , 
+		  "LASTDATE" VARCHAR(12) NOT NULL , 
+		  "LASTTIME" VARCHAR(12) NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "LASTDATE1" VARCHAR(12) , 
+		  "LASTTIME1" VARCHAR(12) , 
+		  "NOHR" VARCHAR(10) , 
+		  "NOMIN" VARCHAR(2) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2     "."T20120405_224751_EXCEPTION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2     "."T20120405_224751_EXCEPTION"  (
+		  "TAGID" VARCHAR(40) NOT NULL , 
+		  "DISCDATE" VARCHAR(12) NOT NULL , 
+		  "DISCTIME" VARCHAR(12) NOT NULL , 
+		  "LASTDATE" VARCHAR(12) NOT NULL , 
+		  "LASTTIME" VARCHAR(12) NOT NULL , 
+		  "COUNTE" VARCHAR(10) NOT NULL , 
+		  "EMPID" VARCHAR(10) NOT NULL , 
+		  "USERNAME" VARCHAR(30) NOT NULL , 
+		  "LASTDATE1" VARCHAR(12) , 
+		  "LASTTIME1" VARCHAR(12) , 
+		  "NOHR" VARCHAR(10) , 
+		  "NOMIN" VARCHAR(2) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+
+
+
+
+
+
+COMMIT WORK;
+
+CONNECT RESET;
+
+TERMINATE;
+
+-- Specified SCHEMA is: DB2
+-- Creating DDL for table(s)
+
+-- Schema name is ignored for the Federated Section
+-- Binding package automatically ... 
+-- Bind is successful
+-- Binding package automatically ... 
+-- Bind is successful
+;

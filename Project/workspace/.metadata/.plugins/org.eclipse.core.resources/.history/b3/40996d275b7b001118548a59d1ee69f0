@@ -1,0 +1,160 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="java.sql.*"%>
+<%@ page language="java"%>
+<%@ page import="java.io.IOException"%>
+<%@ page import="java.sql.Connection"%>
+<%@ page import="java.sql.ResultSet"%>
+<%@ page import="java.sql.Statement"%>
+
+<%@ page import="javax.servlet.ServletException"%>
+<%@ page import="javax.servlet.http.HttpServlet"%>
+<%@ page import="javax.servlet.http.HttpServletRequest"%>
+<%@ page import="javax.servlet.http.HttpServletResponse"%>
+<%@ page import="javax.servlet.RequestDispatcher"%>
+
+<%
+
+
+try{
+	Connection dbconnection = null;
+		Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+    dbconnection=DriverManager.getConnection("jdbc:odbc:ets","db2","vicky");
+    
+  	Statement st;
+  	String username=(String)session.getAttribute("uname");  
+st= dbconnection.createStatement();
+ResultSet rs=st.executeQuery("select * from Details where username='"+ username +"'");
+
+%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Company | Leading India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body
+	style="background-image: url('images/header2.png'); background-repeat: no-repeat;">
+<div id="container">
+<div id="heading">
+<h1 style="margin-left: 30px;">Company | Leading India</h1>
+
+<div id="menu"
+	style="float: right; margin-right: 50px; margin-top: -50px;">
+<ul>
+	<li><a href="home_op.jsp">Home</a></li>
+	<li><a href="search_op.jsp">Search</a></li>
+	<li><a href="org_details_op.jsp">Org. Details</a></li>
+	<li><a href="hierarchy_op.jsp">Hierarchy</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="emp-left-content"><img src="images/male_user.png" /> <img
+	src="images/line1.png"
+	style="margin-top: -80px; margin-left: -20px; height: 175px; width: 200px;" />
+<br />
+<br />
+<div id="lmenu" style="margin-top: -80px; margin-left: 20px;">
+<ul>
+	<li><a href="#"> Inbox</a></li>
+	<li><a href="#"> Update Details</a></li>
+	<li><a href="#"> Account Details</a></li>
+	<li><a href="#"> Log out</a></li>
+</ul>
+</div>
+</div>
+<img src="images/line.png"
+	style="float: left; margin-left: 70px; margin-top: -420px; height: 550px; width: 200px;" />
+<div id="emp-right-content">
+<form action="http://localhost:8080/TGMC/Update" method="get"
+	onSubmit="validate()">
+<% while(rs.next())
+	{
+	%>
+<table>
+
+	<tr>
+		<td>First Name</td>
+		<td><input type="text" size=25 name="fname"
+			value="<%=rs.getString(1)%>" /></td>
+	</tr>
+	<tr>
+		<td>Last Name</td>
+		<td><input type="text" size=25 name="lname"
+			value=<%=rs.getString(2)%> /> <br />
+		</td>
+	</tr>
+	<tr>
+		<td>Age</td>
+		<td><input type="text" size=25 name="age"
+			value=<%=rs.getString(3)%> /> <br />
+		</td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td><%=rs.getString(4)%></td>
+	</tr>
+	<tr>
+		<td>Date of Birth</td>
+		<td><%=rs.getString(5)%> </td>
+	</tr>
+
+	<tr>
+		<td>Employee ID</td>
+		<td><%=rs.getString(6)%></td>
+		<td>Email-ID</td>
+		<td><%=rs.getString(7)%></td>
+	</tr>
+
+	<tr>
+		<td>Username</td>
+		<td><%=rs.getString(8)%></td>
+	</tr>
+
+
+
+	<tr>
+		<td>Residential address</td>
+		<td><textarea rows="4" cols="20" name="resaddr" > <%=rs.getString(10)%></textarea></td>
+	</tr>
+
+	<tr>
+		<td>Residence no.</td>
+		<td><input type="text" size=12 name="resno" value=<%=rs.getString(11)%> /></td>
+		<td>Mobile no.</td>
+		<td><input type="text" size=12 name="mobno" value=<%=rs.getString(12)%> /></td>
+	</tr>
+	<tr>
+		<td>Name of bank</td>
+		<td><input type="text" size=25 name="namebank" value=<%=rs.getString(13)%> /></td>
+	</tr>
+	<tr>
+		<td>Name of branch</td>
+		<td><input type="text" size=25 name="branch" value=<%=rs.getString(14)%> /></td>
+		<td>Account no.</td>
+		<td><input type="text" size=4 name="acc1" />-<input type="text"
+			size=4 name="acc2" />-<input type="text" size=4 name="acc3" />-<input
+			type="text" size=4 name="acc4" /></td>
+	</tr>
+	<tr>
+		<td>Department</td>
+		<td><input type="text" size=25 name="dept" value="<%=rs.getString(18)%>" /></td>
+	</tr>
+	<tr><td>Grade</td>
+		<td><input type="text" size=25 name="grade" value="<%=rs.getString(19)%>" /></td><tr>
+	
+	<tr><td colspan="4"><center><input type="submit" value="update" /></center></td></tr>
+
+</table>
+<%}}
+catch(Exception e){out.print(e);} %>
+</form>
+</div>
+</div>
+
+</body>
+</html>

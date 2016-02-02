@@ -1,0 +1,146 @@
+
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class for Servlet: RfidOn
+ *
+ */
+ public class RfidOn extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+   static final long serialVersionUID = 1L;
+   
+    /* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public RfidOn() {
+		super();
+	}   	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}  	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		Dbconn dbc = Dbconn.getConnection();
+	  	Connection con=dbc.getDbconnection();
+		Statement st;
+		HttpSession session=request.getSession(true); 
+	  	String username=(String)session.getAttribute("uname");
+	  	String lasttim,lasttime,lasttime1,counte;
+	  	String lastdate,lastdate1;
+	  	Calendar calendar = new GregorianCalendar();
+	  
+	  	
+	  	
+	    int hour = calendar.get(Calendar.HOUR);
+	    int minute = calendar.get(Calendar.MINUTE);
+	    int second = calendar.get(Calendar.SECOND);
+	    lasttim = hour+":"+minute+":"+second;
+	    SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+	    Date now = new Date();
+	    lastdate1 = sdfDate.format(now);
+
+	    lasttime1 = lastdate1.substring(11,19);
+	    String min2=lasttime1.substring(0,2);
+	    String hr2=lasttime1.substring(3,5);
+	    String hr1,min1;
+		System.out.println(hr2);
+		System.out.println(min2);
+	    System.out.println(lastdate1);
+			System.out.println(lasttime1);
+	  	int count,hr, min;
+	  	try{
+  			st=con.createStatement();
+  			ResultSet rs=st.executeQuery("select * from Tag where username='"+username+"'");
+  			while(rs.next())
+  			{
+  				counte=rs.getString(6);
+  				System.out.println(counte);
+  				count=Integer.parseInt(counte);
+  				count++;
+  				lastdate=rs.getString(4);
+  				lasttime=rs.getString(5);
+  				min1=lasttime.substring(0,2);
+  			    hr1=lasttime.substring(3,5);
+  				System.out.println(lastdate);
+  				System.out.println(lasttime);
+  				System.out.println(min1);
+  				System.out.println(hr1);
+  				if((lastdate != lastdate1) && (count % 2 == 1))
+  				{
+  					System.out.println("im here");
+  					System.out.println(count);
+  					lastdate=lastdate1;
+  					System.out.println(lastdate);
+  					System.out.println("UPDATE Tag SET (lastdate1) =('"+lastdate1+"')where username='"+ username+"'); ");
+  				  	st.executeUpdate("UPDATE Tag SET (lastdate1) =('"+lastdate1+"')where username='"+ username+"' ");
+  				}
+  				else
+  					if(lastdate == lastdate1 && count % 2 == 1)
+  					{
+  						System.out.println(count);
+  						System.out.println("im here2");
+  					lasttime=lasttime1;
+  					System.out.println(lasttime1);
+  					System.out.println("UPDATE Tag SET (lasttime) =('"+lasttime+"')where username='"+ username+"'); ");
+  				  	st.executeUpdate("UPDATE Tag SET (lasttime) =('"+lasttime+"')where username='"+ username+"' ");
+  					}
+  					else
+  					{
+  						System.out.println("im here3");
+  						System.out.println(count);
+  						hr2+=60;
+  					    hr=Integer.parseInt(hr2)-Integer.parseInt(hr1);
+  					  System.out.println(lasttime);
+  					System.out.println(hr);
+  					  System.out.println("UPDATE Tag SET (lastdate1,lasttime1,counte,nohr) =('"+lastdate1+"','"+lasttime1+"','"+count+"')where username='"+ username+"'); ");
+  				  	st.executeUpdate("UPDATE Tag SET (lastdate,lasttime,counte,nohr) =('"+lastdate+"','"+lasttime+"','"+count+"','"+hr+"')where username='"+ username+"'");
+  					}
+  				
+  			
+  	if(count % 2 == 1)
+  	{
+  		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/home_emp_in.jsp");
+	  	rd.forward(request, response);	
+  	}
+  	else
+  	{
+  		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/home_emp_out.jsp");
+	  	rd.forward(request, response);	
+  	}
+  		
+	}
+	  	}
+  			catch(Exception e)
+  			{
+  				e.printStackTrace();
+  			}
+}
+
+	private String toString(Date lastdate) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+ }

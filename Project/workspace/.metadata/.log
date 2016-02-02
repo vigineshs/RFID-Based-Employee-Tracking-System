@@ -1,0 +1,1212 @@
+!SESSION 2012-03-20 07:17:02.453 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-20 07:21:54.937
+!MESSAGE Error calling delegate setDefaults() ServerWorkingCopy 3_20_12_7_21_AM0
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jst.server.generic.core.internal.GenericServer.getServerDefinition(GenericServer.java:239)
+	at org.eclipse.jst.server.generic.core.internal.GenericServer.setDefaults(GenericServer.java:324)
+	at org.eclipse.wst.server.core.internal.ServerWorkingCopy.setDefaults(ServerWorkingCopy.java:608)
+	at org.eclipse.wst.server.core.internal.ServerType.createServer(ServerType.java:195)
+	at org.eclipse.wst.server.ui.internal.wizard.page.ServerCreationCache.getServer(ServerCreationCache.java:61)
+	at org.eclipse.wst.server.ui.internal.wizard.page.NewManualServerComposite.loadServerImpl(NewManualServerComposite.java:233)
+	at org.eclipse.wst.server.ui.internal.wizard.page.NewManualServerComposite.handleTypeSelection(NewManualServerComposite.java:402)
+	at org.eclipse.wst.server.ui.internal.wizard.page.NewManualServerComposite$1.serverTypeSelected(NewManualServerComposite.java:142)
+	at org.eclipse.wst.server.ui.internal.viewers.ServerTypeComposite$2.selectionChanged(ServerTypeComposite.java:85)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:46)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:199)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2047)
+	at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1138)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1168)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:227)
+	at org.eclipse.jface.util.OpenStrategy.access$3(OpenStrategy.java:221)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:388)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3682)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3293)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:820)
+	at org.eclipse.jface.window.Window.open(Window.java:796)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.getServer(RunOnServerActionDelegate.java:121)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:250)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:659)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:39)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:54)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:419)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.run(LaunchShortcutAction.java:61)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:546)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:490)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:402)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3682)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3293)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-20 07:23:34.015
+!MESSAGE Could not launch Run on Server
+!STACK 1
+org.eclipse.core.runtime.CoreException: This launch configuration is invalid and may be out of sync with the workspace
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerLaunchConfigurationDelegate.launch(RunOnServerLaunchConfigurationDelegate.java:87)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:328)
+	at org.eclipse.wst.server.ui.internal.actions.RunOnServerActionDelegate.run(RunOnServerActionDelegate.java:659)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:39)
+	at org.eclipse.wst.server.ui.internal.ServerLaunchShortcut.launch(ServerLaunchShortcut.java:54)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:419)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.run(LaunchShortcutAction.java:61)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:546)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:490)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:402)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3682)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3293)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SUBENTRY 1 org.eclipse.wst.server.ui 4 0 2012-03-20 07:23:34.015
+!MESSAGE This launch configuration is invalid and may be out of sync with the workspace
+!SESSION 2012-03-20 10:04:17.187 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-20 10:51:38.375
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-03-20 21:54:59.765 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-20 22:10:45.250
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-20 22:10:45.265
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-20 22:10:45.359
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2012-03-22 06:46:12.031 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:54:02.734
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:54:02.750
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:54:03.343
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:56:53.187
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:56:53.187
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:56:53.296
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:57:06.562
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:57:06.562
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:57:06.656
+!MESSAGE Resource '/TGMC' does not exist.
+!SESSION 2012-03-22 06:57:22.921 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:57:50.312
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:57:50.312
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:57:50.671
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:58:27.625
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:58:27.625
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:58:27.734
+!MESSAGE Resource '/TGMC' does not exist.
+!SESSION 2012-03-22 06:59:03.093 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 06:59:58.093
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Resource '/TGMC' does not exist.
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:155)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-22 06:59:58.093
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2012-03-22 06:59:58.234
+!MESSAGE Resource '/TGMC' does not exist.
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2012-03-22 07:12:02.875
+!MESSAGE Exceptions occurred while formatting documents
+!SUBENTRY 1 org.eclipse.wst.sse.ui 4 4 2012-03-22 07:12:02.875
+!MESSAGE Exception occurred while formatting document /TGMC/WebContent/online.jsp
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/TGMC/WebContent/online.jsp)[381]: java.io.IOException: File not found: E:\IBM\workspace\TGMC\WebContent\online.jsp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:156)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:166)
+	at java.io.InputStream.read(Unknown Source)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:132)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ByteReader.read(ByteReader.java:84)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.zzRefill(JSPHeadTokenizer.java:359)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.primGetNextToken(JSPHeadTokenizer.java:588)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.getNextToken(JSPHeadTokenizer.java:253)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.parseHeader(JSPResourceEncodingDetector.java:387)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.parseInput(JSPResourceEncodingDetector.java:449)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.getEncodingMemento(JSPResourceEncodingDetector.java:110)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.handleStandardCalculations(ContentDescriberForJSP.java:175)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.handleCalculations(ContentDescriberForJSP.java:123)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.calculateSupportedOptions(ContentDescriberForJSP.java:95)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.describe(ContentDescriberForJSP.java:42)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:314)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:318)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:400)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:339)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:117)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:146)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:154)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:154)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.process(FormatActionDelegate.java:178)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate$FormatJob.run(FormatActionDelegate.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.core.resources 4 381 2012-03-22 07:12:02.875
+!MESSAGE Error retrieving content description for resource '/TGMC/WebContent/online.jsp'.
+!STACK 0
+java.io.IOException: File not found: E:\IBM\workspace\TGMC\WebContent\online.jsp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:156)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:166)
+	at java.io.InputStream.read(Unknown Source)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:132)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ByteReader.read(ByteReader.java:84)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.zzRefill(JSPHeadTokenizer.java:359)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.primGetNextToken(JSPHeadTokenizer.java:588)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPHeadTokenizer.getNextToken(JSPHeadTokenizer.java:253)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.parseHeader(JSPResourceEncodingDetector.java:387)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.parseInput(JSPResourceEncodingDetector.java:449)
+	at org.eclipse.jst.jsp.core.internal.contenttype.JSPResourceEncodingDetector.getEncodingMemento(JSPResourceEncodingDetector.java:110)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.handleStandardCalculations(ContentDescriberForJSP.java:175)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.handleCalculations(ContentDescriberForJSP.java:123)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.calculateSupportedOptions(ContentDescriberForJSP.java:95)
+	at org.eclipse.jst.jsp.core.internal.contenttype.ContentDescriberForJSP.describe(ContentDescriberForJSP.java:42)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:314)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:318)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:400)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:339)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:117)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:146)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:154)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.format(FormatActionDelegate.java:154)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate.process(FormatActionDelegate.java:178)
+	at org.eclipse.wst.sse.ui.internal.actions.FormatActionDelegate$FormatJob.run(FormatActionDelegate.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2012-03-22 17:48:28.406 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 18:23:19.875
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-22 18:23:19.890
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-22 18:23:19.953
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2012-03-22 19:04:32.937 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 4 2 2012-03-22 19:39:11.531
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.ClassCastException: org.eclipse.ui.internal.browser.browsers.MozillaBrowser cannot be cast to java.util.HashMap
+	at org.eclipse.ui.internal.browser.DefaultBrowserSupport.removeBrowser(DefaultBrowserSupport.java:175)
+	at org.eclipse.ui.internal.browser.InternalBrowserInstance$1.partClosed(InternalBrowserInstance.java:66)
+	at org.eclipse.ui.internal.PartListenerList$3.run(PartListenerList.java:102)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.PartListenerList.fireEvent(PartListenerList.java:57)
+	at org.eclipse.ui.internal.PartListenerList.firePartClosed(PartListenerList.java:100)
+	at org.eclipse.ui.internal.PartService.firePartClosed(PartService.java:100)
+	at org.eclipse.ui.internal.WorkbenchPagePartList.firePartClosed(WorkbenchPagePartList.java:38)
+	at org.eclipse.ui.internal.PartList.partClosed(PartList.java:255)
+	at org.eclipse.ui.internal.PartList.removePart(PartList.java:176)
+	at org.eclipse.ui.internal.WorkbenchPage.disposePart(WorkbenchPage.java:1603)
+	at org.eclipse.ui.internal.WorkbenchPage.handleDeferredEvents(WorkbenchPage.java:1354)
+	at org.eclipse.ui.internal.WorkbenchPage.deferUpdates(WorkbenchPage.java:1338)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1312)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1367)
+	at org.eclipse.ui.internal.EditorPane.doHide(EditorPane.java:61)
+	at org.eclipse.ui.internal.PartStack.close(PartStack.java:543)
+	at org.eclipse.ui.internal.EditorStack.close(EditorStack.java:206)
+	at org.eclipse.ui.internal.PartStack$1.close(PartStack.java:122)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation$1.handleEvent(TabbedStackPresentation.java:81)
+	at org.eclipse.ui.internal.presentations.util.AbstractTabFolder.fireEvent(AbstractTabFolder.java:267)
+	at org.eclipse.ui.internal.presentations.util.AbstractTabFolder.fireEvent(AbstractTabFolder.java:276)
+	at org.eclipse.ui.internal.presentations.defaultpresentation.DefaultTabFolder.access$1(DefaultTabFolder.java:1)
+	at org.eclipse.ui.internal.presentations.defaultpresentation.DefaultTabFolder$1.closeButtonPressed(DefaultTabFolder.java:67)
+	at org.eclipse.ui.internal.presentations.PaneFolder.notifyCloseListeners(PaneFolder.java:596)
+	at org.eclipse.ui.internal.presentations.PaneFolder$3.close(PaneFolder.java:189)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:2159)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:320)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3682)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3293)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SESSION 2012-03-22 21:51:17.312 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 22:03:49.375
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-22 22:05:59.609
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-03-23 06:46:37.703 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2012-03-23 06:49:28.937
+!MESSAGE 0
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.eclipse.jst.jsf.validation.internal.JSPSemanticsValidator.validate(JSPSemanticsValidator.java:163)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:339)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:246)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:96)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:206)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.setEntireDocumentDirty(DocumentRegionProcessor.java:216)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$DocumentListener.documentChanged(DirtyRegionProcessor.java:82)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireDocumentChanged(BasicStructuredDocument.java:462)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1204)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1970)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2394)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:98)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:42)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:109)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2390)
+	at org.eclipse.wst.sse.ui.internal.StructuredDocumentToTextAdapter.replaceTextRange(StructuredDocumentToTextAdapter.java:1187)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:5757)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:6500)
+	at org.eclipse.swt.custom.StyledText.doDelete(StyledText.java:2224)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:5648)
+	at org.eclipse.jface.text.TextViewer.doOperation(TextViewer.java:3728)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:857)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1429)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:502)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:475)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:429)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:165)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:821)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:879)
+	at org.eclipse.ui.internal.keys.OutOfOrderListener.handleEvent(OutOfOrderListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:975)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:971)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:3992)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3701)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4364)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SESSION 2012-03-23 10:11:36.734 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.help.base 4 0 2012-03-23 10:15:32.953
+!MESSAGE An error occured while pre-processing help XHTML document "/org.eclipse.jst.ejb.doc.user/topics/txdocletconf.html" for search indexing
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 25; columnNumber: 69; The element type "p" must be terminated by the matching end-tag "</p>".
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:56)
+	at org.eclipse.help.internal.dynamic.XMLProcessor.process(XMLProcessor.java:49)
+	at org.eclipse.help.internal.xhtml.DynamicXHTMLProcessor.process(DynamicXHTMLProcessor.java:76)
+	at org.eclipse.help.internal.search.XHTMLSearchParticipant.preprocess(XHTMLSearchParticipant.java:58)
+	at org.eclipse.help.search.XMLSearchParticipant.addDocument(XMLSearchParticipant.java:301)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:219)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:246)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:158)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:105)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:624)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:598)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:27)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.help.base 4 0 2012-03-23 10:15:34.421
+!MESSAGE An error occured while pre-processing help XHTML document "/org.eclipse.jst.ejb.doc.user/topics/ceresrc.html" for search indexing
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 104; columnNumber: 19; The element type "dd" must be terminated by the matching end-tag "</dd>".
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:56)
+	at org.eclipse.help.internal.dynamic.XMLProcessor.process(XMLProcessor.java:49)
+	at org.eclipse.help.internal.xhtml.DynamicXHTMLProcessor.process(DynamicXHTMLProcessor.java:76)
+	at org.eclipse.help.internal.search.XHTMLSearchParticipant.preprocess(XHTMLSearchParticipant.java:58)
+	at org.eclipse.help.search.XMLSearchParticipant.addDocument(XMLSearchParticipant.java:301)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:219)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:246)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:158)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:105)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:624)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:598)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:27)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.help.base 4 4 2012-03-23 10:15:36.156
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-03-23 10:15:36.156
+!MESSAGE Exception occurred while adding document /org.eclipse.jst.ejb.doc.user/topics/txdocletconf.html to index.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at javax.xml.parsers.SAXParser.parse(Unknown Source)
+	at org.eclipse.help.search.XMLSearchParticipant.addDocument(XMLSearchParticipant.java:302)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:219)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:246)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:158)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:105)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:624)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:598)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:27)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-03-23 10:15:36.156
+!MESSAGE Exception occurred while adding document /org.eclipse.jst.ejb.doc.user/topics/ceresrc.html to index.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at javax.xml.parsers.SAXParser.parse(Unknown Source)
+	at org.eclipse.help.search.XMLSearchParticipant.addDocument(XMLSearchParticipant.java:302)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:219)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:246)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:158)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:105)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:624)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:598)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:27)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-23 10:19:48.812
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 10:19:48.812
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 10:19:49.578
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2012-03-23 16:45:01.046 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-23 16:47:14.250
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:47:14.265
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:47:14.312
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-23 16:47:49.312
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:47:49.312
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:47:49.343
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-23 16:48:36.281
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:48:36.281
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:48:36.296
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-23 16:49:00.218
+!MESSAGE Error starting server Tomcat v6.0 Server at localhost
+!STACK 1
+org.eclipse.core.runtime.CoreException: Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.setupLaunch(TomcatServerBehaviour.java:438)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.launch(TomcatLaunchConfigurationDelegate.java:92)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:759)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:608)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:601)
+	at org.eclipse.wst.server.core.internal.Server.start(Server.java:1265)
+	at org.eclipse.wst.server.core.internal.Server.synchronousStart(Server.java:1662)
+	at org.eclipse.wst.server.core.internal.StartServerJob.run(StartServerJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:49:00.218
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-23 16:49:00.250
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v6.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2012-03-25 08:01:56.765 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2012-03-25 08:04:33.968
+!MESSAGE For input string: "2-"
+!STACK 0
+java.lang.NumberFormatException: For input string: "2-"
+	at sun.misc.FloatingDecimal.readJavaFormatString(Unknown Source)
+	at java.lang.Float.valueOf(Unknown Source)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser$FloatInfo.parse(CSSDeclarationItemParser.java:68)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser$FloatInfo.<init>(CSSDeclarationItemParser.java:41)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser.createFloatValue(CSSDeclarationItemParser.java:251)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser.createPrimitiveValue(CSSDeclarationItemParser.java:325)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser.setupValues(CSSDeclarationItemParser.java:1014)
+	at org.eclipse.wst.css.core.internal.document.CSSDeclarationItemParser.setupDeclarationItem(CSSDeclarationItemParser.java:968)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.insertStyleDeclarationItem(CSSModelParser.java:809)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.insertStructuredDocumentRegion(CSSModelParser.java:499)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.insertStructuredDocumentRegions(CSSModelParser.java:527)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.replaceStructuredDocumentRegions(CSSModelParser.java:1042)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.changeStructuredDocumentRegion(CSSModelParser.java:100)
+	at org.eclipse.wst.css.core.internal.document.CSSModelParser.changeRegion(CSSModelParser.java:114)
+	at org.eclipse.wst.css.core.internal.document.CSSModelImpl.regionChanged(CSSModelImpl.java:485)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:544)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1182)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1955)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2394)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:98)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:42)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:109)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2390)
+	at org.eclipse.wst.sse.ui.internal.StructuredDocumentToTextAdapter.replaceTextRange(StructuredDocumentToTextAdapter.java:1187)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:5757)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:6500)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2155)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5029)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5054)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:4800)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:975)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:971)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1285)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:3772)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3672)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4351)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SESSION 2012-03-27 06:09:19.109 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_02
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2012-03-27 06:19:28.265
+!MESSAGE String index out of range: -1
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at org.eclipse.wst.sse.core.internal.undo.StructuredTextUndoManager$InternalStructuredDocumentListener.processStructuredDocumentEvent(StructuredTextUndoManager.java:80)
+	at org.eclipse.wst.sse.core.internal.undo.StructuredTextUndoManager$InternalStructuredDocumentListener.processStructuredDocumentEvent(StructuredTextUndoManager.java:125)
+	at org.eclipse.wst.sse.core.internal.undo.StructuredTextUndoManager$InternalStructuredDocumentListener.regionChanged(StructuredTextUndoManager.java:130)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:544)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1183)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1955)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2394)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:98)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:42)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:109)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2390)
+	at org.eclipse.wst.sse.ui.internal.StructuredDocumentToTextAdapter.replaceTextRange(StructuredDocumentToTextAdapter.java:1187)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:5757)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:6500)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2111)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:5645)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5033)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5054)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:4800)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:975)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:971)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1285)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:3772)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3672)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4351)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-27 06:54:18.921
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-03-31 22:04:02.906 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-31 22:04:44.328
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Publishing failed with multiple errors
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:161)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:04:44.328
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.328
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/css/style.css'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.328
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header1.png'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.328
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header2.png'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.328
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/styles.css'.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:04:44.796
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.796
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/css/style.css'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.796
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header1.png'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.796
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header2.png'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:04:44.796
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/styles.css'.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-31 22:05:51.109
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Publishing failed with multiple errors
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:161)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:05:51.109
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.109
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/css/style.css'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.109
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header1.png'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.109
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header2.png'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.109
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/styles.css'.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:05:51.203
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.203
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/css/style.css'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.203
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header1.png'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.203
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/header2.png'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:05:51.203
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/styles.css'.
+!SESSION 2012-03-31 22:19:14.375 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-31 22:19:43.218
+!MESSAGE Task failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Publishing failed with multiple errors
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.throwException(PublishOperation2.java:161)
+	at org.eclipse.jst.server.tomcat.core.internal.PublishOperation2.execute(PublishOperation2.java:72)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.performTasks(ServerBehaviourDelegate.java:885)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:649)
+	at org.eclipse.wst.server.core.internal.Server.doPublish(Server.java:887)
+	at org.eclipse.wst.server.core.internal.Server.publish(Server.java:874)
+	at org.eclipse.wst.server.core.internal.PublishServerJob.run(PublishServerJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:19:43.234
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:19:43.234
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/line.png'.
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2012-03-31 22:19:43.234
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/line1.png'.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2012-03-31 22:19:43.578
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:19:43.578
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/line.png'.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2012-03-31 22:19:43.578
+!MESSAGE Resource is out of sync with the file system: '/TGMC/WebContent/images/line1.png'.
+!SESSION 2012-03-31 22:36:36.656 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-03-31 23:28:58.359
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-04-02 18:50:38.718 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-04-02 18:50:46.562
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2012-04-02 18:51:08.734
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes
+!SESSION 2012-04-05 07:34:25.640 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2012-04-05 11:02:32.906
+!MESSAGE 0
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.eclipse.jst.jsf.validation.internal.JSPSemanticsValidator.validate(JSPSemanticsValidator.java:163)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:339)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:246)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:96)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:206)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.setEntireDocumentDirty(DocumentRegionProcessor.java:216)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$DocumentListener.documentChanged(DirtyRegionProcessor.java:82)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireDocumentChanged(BasicStructuredDocument.java:462)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1204)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1970)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2394)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:98)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:42)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:109)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2390)
+	at org.eclipse.wst.sse.ui.internal.StructuredDocumentToTextAdapter.replaceTextRange(StructuredDocumentToTextAdapter.java:1187)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:5757)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:6500)
+	at org.eclipse.swt.custom.StyledText.doDelete(StyledText.java:2224)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:5648)
+	at org.eclipse.jface.text.TextViewer.doOperation(TextViewer.java:3728)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:857)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1429)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:502)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:475)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:429)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:165)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:821)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:879)
+	at org.eclipse.ui.internal.keys.OutOfOrderListener.handleEvent(OutOfOrderListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:975)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:971)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:3992)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3701)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4364)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-04-05 12:34:38.093
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-04-05 15:46:34.312 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-04-05 15:50:58.703
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-04-05 18:06:51.546 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-04-05 18:12:14.734
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+!SESSION 2012-04-05 20:18:51.031 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-04-05 21:20:45.046
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2012-04-05 23:18:24.984
+!MESSAGE 0
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.eclipse.jst.jsf.validation.internal.JSPSemanticsValidator.validate(JSPSemanticsValidator.java:163)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.validate(ReconcileStepForValidator.java:339)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ReconcileStepForValidator.reconcileModel(ReconcileStepForValidator.java:246)
+	at org.eclipse.jface.text.reconciler.AbstractReconcileStep.reconcile(AbstractReconcileStep.java:96)
+	at org.eclipse.wst.sse.ui.internal.reconcile.validator.ValidatorStrategy.reconcile(ValidatorStrategy.java:206)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DocumentRegionProcessor.setEntireDocumentDirty(DocumentRegionProcessor.java:216)
+	at org.eclipse.wst.sse.ui.internal.reconcile.DirtyRegionProcessor$DocumentListener.documentChanged(DirtyRegionProcessor.java:82)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireDocumentChanged(BasicStructuredDocument.java:462)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1204)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1970)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2394)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:98)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:42)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:109)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2390)
+	at org.eclipse.wst.sse.ui.internal.StructuredDocumentToTextAdapter.replaceTextRange(StructuredDocumentToTextAdapter.java:1187)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:5757)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:6500)
+	at org.eclipse.swt.custom.StyledText.doDelete(StyledText.java:2224)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:5648)
+	at org.eclipse.jface.text.TextViewer.doOperation(TextViewer.java:3728)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:857)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1429)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:502)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:475)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:429)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:165)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:821)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:879)
+	at org.eclipse.ui.internal.keys.OutOfOrderListener.handleEvent(OutOfOrderListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:938)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:962)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:947)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:975)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:971)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:3992)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3701)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:291)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4364)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2265)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3291)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2012-04-05 23:38:15.031
+!MESSAGE Error calling delegate restart() Tomcat v6.0 Server at localhost

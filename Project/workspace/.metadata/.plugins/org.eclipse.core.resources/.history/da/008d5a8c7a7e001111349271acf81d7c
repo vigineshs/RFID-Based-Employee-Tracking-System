@@ -1,0 +1,173 @@
+
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.sql.Connection;
+import java.sql.Statement;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class for Servlet: AlientClientExample
+ *
+ */
+ public class AlientClientExample extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+	 static final long serialVersionUID = 1L;
+	   public static final String IP_ADDRESS = new String("127.0.0.1");
+		public static final int READER_PORT = 20000;
+		private static Socket connection = null;
+
+		private static PrintWriter out = null;
+		private static BufferedReader in = null;
+		private void  init(){
+			connection = new Socket("127.0.0.1", READER_PORT);
+
+			in = new BufferedReader(new InputStreamReader(connection
+					.getInputStream()));
+			out = new PrintWriter(connection.getOutputStream());
+
+			Thread.sleep(500);
+			System.out.println(readFromReader(in));
+			out.write("alien\n");
+			out.flush();
+			System.out.println(readFromReader(in));
+			Thread.sleep(500);
+			out.write("password\n");
+			out.flush();
+			System.out.println(readFromReader(in));
+		}
+		
+		/**
+		 * Tear down the connection
+		 * @throws IOException
+		 */
+		private void tearDown() throws IOException{
+			out.write("q");
+			out.flush();
+			connection.close();
+		}
+		
+		/**
+		 * Get tags back from the alien reader
+		 * @return
+		 * @throws IOException
+		 */
+		private String getTags(HttpServletRequest request, HttpServletResponse response) throws IOException{
+			String command = "t";
+			out.write(command + "\n");
+			out.flush();
+			
+			
+			
+			
+			String returnVal = readFromReader(in);
+			
+			FileWriter fstream = new FileWriter("out.txt");
+	       BufferedWriter out = new BufferedWriter(fstream);
+	       out.write(returnVal);
+
+			out.close();
+			String tag,discdate,disctime,lastdate,lasttime,count,ant,proto;
+			String temp;
+			temp= returnVal;
+			
+			  tag = temp.substring(7, 36);
+			  discdate=temp.substring(43,53);
+			  disctime=temp.substring(54,62);
+			  lastdate=temp.substring(69,79);
+			  lasttime=temp.substring(80,88);
+			  count=temp.substring(96,98);
+			  proto=temp.substring(113,115);
+			  System.out.println(tag); 
+			  System.out.println(discdate); 
+			  System.out.println(disctime); 
+			  System.out.println(lastdate);
+			  System.out.println(lasttime);
+			  System.out.println(count);
+			  System.out.println(proto);
+			  Dbconn dbc = Dbconn.getConnection();
+			  	Connection con=dbc.getDbconnection();
+			  	Statement st;
+			  	
+			  	HttpSession session=request.getSession(true); 
+			  	String username=(String)session.getAttribute("uname");
+			  	try{
+		  			st=con.createStatement();
+		  			System.out.println("INSERT into TAG values('"+tag+"','"+discdate+"','"+disctime+"','"+lastdate+"','"+lasttime+"','"+count+"','"+proto+"');");
+				    st.executeUpdate("INSERT into TAG values('"+tag+"','"+discdate+"','"+disctime+"','"+lastdate+"','"+lasttime+"','"+count+"','"+proto+"');");
+
+				    RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/home_op.jsp");
+				   	 rd.forward(request,response);
+			  	}
+				   	catch(Exception e)
+				  	{
+				  		e.printStackTrace();
+				  	}
+				 
+			return returnVal;
+		}
+		
+		/**
+		 * @param args
+		 * @throws InterruptedException 
+		 * @throws IOException 
+		 */
+		public static void main(String[] args) throws IOException, InterruptedException {
+			AlientClientExample client = new AlientClientExample();
+			client.initial();
+			Thread.sleep(500);
+			
+			Thread.sleep(500);
+			client.tearDown();
+
+		}
+		
+		/**
+		 * Read responses from the socket
+		 * @param inBuf
+		 * @return
+		 * @throws IOException
+		 */
+		public static String readFromReader(BufferedReader inBuf) throws IOException{
+			StringBuffer buf=new StringBuffer();
+			int ch=inBuf.read();
+			while((char)ch!='\0'){
+				buf.append((char)ch);
+				ch=inBuf.read();
+					FileWriter fstream = new FileWriter("out.txt");
+	               BufferedWriter out = new BufferedWriter(fstream);
+	               out.write(ch);
+			}
+			return buf.toString();
+		}
+   
+    /* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public AlientClientExample() {
+		super();
+	}   	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}  	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}   	  	    
+}
